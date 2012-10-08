@@ -1,39 +1,44 @@
+/**
+* by awen
+* cczw2010@gmail.com
+* 2012-10-7
+**/
 (function($){
 	$.zwslider={
 		/**默认参数*/
 		defaults:{
-			iWidth:0,				/**图片宽度,没有的话取容器的width*/
-			iHeight:0,				/**图片的高度,没有的话取容器的height*/
-            autoStart:true,			/**是否开启自动模式*/
+		iWidth:0,			/**图片宽度,没有的话取容器的width*/
+		iHeight:0,			/**图片的高度,没有的话取容器的height*/
+            	autoStart:true,			/**是否开启自动模式*/
 	    	timeout:3000,    		/**自动动画间隔毫秒*/
 	    	onPause:true,			/**鼠标在图片上时是否暂停*/
 
 	    	showBtn:true,			/**是否显示上一页下一页按钮*/
-	    	prevBtn:'',				/**上一页标签的jquery选择器，没有的话就自己创建*/
-	    	nextBtn:'',				/**下一页标签的jquery选择器，没有的话就自己创建*/
+	    	prevBtn:'',			/**上一页标签的jquery选择器，没有的话就自己创建*/
+	    	nextBtn:'',			/**下一页标签的jquery选择器，没有的话就自己创建*/
 	    	prevClass:'',			/**程序创建的上一页标签的样式，如果指定了上一页id则该键值无效*/
 	    	nextClass:'',			/**程序创建的下一页标签的样式，如果指定了上一页id则该键值无效*/
 	    	//onImageStop : false ,
-	    	curIdx:0,				/**开始的页码默认0*/
-            switchMode:'hover',    	/**click,hover*/
-            switchStyle:'fade',		/**动画类型 （fade,horizontal,vertical 。。扩展中）*/
- 	    	switchEase:'swing',    /**动画切换效果(swing(默认), linear)可通过ease插件来扩展*/
-            switchSpeed:800,		/**动画速度,(毫秒数)*/
-            //pannel
-            showPannel:true,		/**是否显示面板*/
-            showTitle:true,			/**是否显先标题*/
-            showPages:true,			/**是否显示页码*/
-            //自动生成的pannel面板的设定
+	    	curIdx:0,			/**开始的页码默认0*/
+           	switchMode:'hover',    		/**click,hover*/
+           	switchStyle:'fade',		/**动画类型 （fade,horizontal,vertical 。。扩展中）*/
+ 	    	switchEase:'swing',    		/**动画切换效果(swing(默认), linear)可通过ease插件来扩展*/
+            	switchSpeed:800,		/**动画速度,(毫秒数)*/
+            	//pannel
+            	showPannel:true,		/**是否显示面板*/
+           	showTitle:true,			/**是否显先标题*/
+           	showPages:true,			/**是否显示页码*/
+            	//自动生成的pannel面板的设定
            	pannelClass:'',			/**面板用户自定义的样式名称*/
-            pannelShowType:'none',	/**面板显示动画，none（默认）,slide滑动显示*/
-            PagesClass:'',			/**页码用户自定义的的样式*/	
-            PagesShowType:'circle',	/**页码的显示样式,num、square、circle(默认)
+            	pannelShowType:'none',		/**面板显示动画，none（默认）,slide滑动显示*/
+            	PagesClass:'',			/**页码用户自定义的的样式*/	
+           	PagesShowType:'circle',		/**页码的显示样式,num、square、circle(默认)*/
 
-            //切换时的回调，自定制利器
-            funcBeforeChange:null,		/*参数:title,url,idx,count*/
-            funcAfterChange:null,		/*参数:title,url,idx,count*/
-            //全局变量
-            count:0						/*参数:title,url,idx,count*/
+	        //切换时的回调，自定制利器
+	        funcBeforeChange:null,		/*参数:title,url,idx,count*/
+	        funcAfterChange:null,		/*参数:title,url,idx,count*/
+	        //全局变量
+	        count:0				/*参数:title,url,idx,count*/
 	    }
 	}
 	function zwslider(obj,options){
