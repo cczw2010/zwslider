@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<style type="text/css">
+	.slider{
+	     width: 500px;
+	     height: 200px;
+	}
+	#log6{
+		width: 200px;
+		height: 20px;
+		line-height:20px;
+		font: 13px;
+		color:#f30;
+		border:1px solid #ccc;
+	}
+
+	.pclass{
+		background: #f90;
+	}
+	.pannelc{
+		background: #ccc;
+		color: #900;
+	}
+	.pagec{
+		float:left;
+	}
+</style>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easing.1.3.js"></script> 
+<script type="text/javascript" src="zwslider.js"></script>
+<script type="text/javascript">
+jQuery(
+	function(){
+		$("#sliders1").zwslider();
+		$("#sliders2").zwslider({'switchStyle':'vertical','timeout':5000,'switchSpeed':500});
+		$("#sliders3").zwslider({'switchStyle':'horizontal','switchSpeed':100});
+		$("#sliders4").zwslider({'switchStyle':'horizontal','iWidth':250});
+		$("#sliders5").zwslider({'prevBtn':'#outperbtn','nextBtn':'#outnextbtn'});
+		$("#sliders6").zwslider({'funcAfterChange':function(i,cnt){
+			$("#log6").html("after>"+i+">"+cnt);
+		},'funcBeforeChange':function(i,cnt){
+			$("#log6").html("before>"+i+">"+cnt);
+		},'PagesShowType':'num'});
+		$("#sliders7").zwslider({'pannelShowType':'slide','PagesShowType':'square'});
+		$("#sliders8").zwslider({'switchStyle':'vertical','perPage':2,'switchEase':'easeOutBounce'});
+		$("#sliders9").zwslider({'prevClass':'pclass','nextClass':'pclass','pannelClass':'pannelc','PagesClass':'pagec'});
+		$("#sliders10").zwslider({'switchStyle':'horizontal','showPannel':false,'showPages':false,'showBtn':false});
+	}
+);
+ 
+</script>
+<title></title>
+
+</head>
+<body>
+	<!--test1-->
+ 	<div>
+ 		<p>1.默认模式</p>
+ 		<div class="slider"  id="sliders1" style="">
+	 		<ul>
+		 		<li><a href=""><img src="images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<!--test2-->
+ 	<div>
+ 		<p>2.垂直滚动模式</p>
+ 		<div class="slider"   id="sliders2" style="">
+	 		<ul>
+		 		<li><a href=""><img src="images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<!--test3-->
+ 	<div>
+ 		<p>3.水平滚动模式</p>
+ 		<div  class="slider"  id="sliders3" style="">
+	 		<ul>
+		 		<li><a href=""><img src="images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<!--test4-->
+ 	<div>
+ 		<p>4.一次展示多副图片(只在垂直和水平模式下有效果)</p>
+ 		<div  class="slider"  id="sliders4" style="">
+	 		<ul>
+		 		<li><a href=""><img src="images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><div style='margin:50px;'>今天天气不错啊，挺风和日丽的，今天你吃了吗？还饿吗？<br>  <a href="">饿</a> <a href="">不饿</a>  </div></li>
+		 		<li><a href=""><img src="images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<!--test5-->
+ 	<div>
+ 		<p>5.将外部元素设定为上下页按钮</p>
+ 		<input type="button" value="上一页"  id="outperbtn"/><input type="button" value="下一页"  id="outnextbtn"/>
+	 	<hr>
+ 		<div  class="slider"  id="sliders5" style="">
+	 		<ul>
+		 		<li><a href=""><img src="images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<!--test6-->
+ 	<div>
+ 		<p>6.动画前后回调</p>
+ 		<div id="log6"></div>
+ 		<hr>
+ 		<div  class="slider"  id="sliders6" style="">
+	 		<ul>
+		 		<li><a href=""><img src="images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<!--test7-->
+ 	<div>
+ 		<p>7.面板特效</p>
+ 		<div  class="slider"  id="sliders7" style="">
+	 		<ul>
+		 		<li><a href=""><img src="images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<div>
+ 		<p>8.利用ease插件，动画效果</p>
+ 		<div  class="slider"  id="sliders8" style="">
+	 		<ul>
+		 		<li><a href=""><img src="images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<div>
+ 		<p>9.自定义按钮，标题，页码样式</p>
+ 		<div  class="slider"  id="sliders9" style="">
+	 		<ul>
+		 		<li><a href=""><img src="images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<div>
+ 		<p>10.隐藏所有面板</p>
+ 		<div  class="slider"  id="sliders10" style="">
+	 		<ul>
+		 		<li><a href=""><img src="images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+</body>
+</html>
