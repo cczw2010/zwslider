@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+<style type="text/css">
+	.slider{
+	     width: 500px;
+	     height: 200px;
+	}
+	#log6{
+		width: 200px;
+		height: 20px;
+		line-height:20px;
+		font: 13px;
+		color:#f30;
+		border:1px solid #ccc;
+	}
+	*{
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+	.pclass{
+		background: #f90;
+	}
+	.pannelc{
+		background: #ccc;
+		color: #900;
+	}
+	.pagec{
+		float:left;
+	}
+	#test{
+		height: 30px;
+	}
+</style>
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easing.1.3.js"></script> 
+<script type="text/javascript" src="../zwslider.js?t=19"></script>
+<script type="text/javascript">
+function logs(msg){
+	$("#test").html(">>"+msg)
+}
+jQuery(
+	function(){
+		$("#sliders1").zwslider({'switchStyle':'v','timeout':5000,'switchSpeed':500,'canDrag':true});
+		$("#sliders2").zwslider({'switchStyle':'h','switchSpeed':100,'canDrag':true});
+		$("#sliders3").zwslider({'switchStyle':'h','iWidth':200,'canDrag':true});
+		$("#sliders4").zwslider({'switchStyle':'v','iWidth':250,'iHeight':100,'switchEase':'easeOutBounce','canDrag':true});
+	}
+);
+ 
+</script>
+<title></title>
+
+</head>
+<body>
+	<div id="test"></div>
+	<!--test1-->	
+ 	<div>
+ 		<p>1.垂直滚动模式</p>
+ 		<div class="slider"   id="sliders1" style="">
+	 		<ul>
+		 		<li><a href=""><img src="../images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="../images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="../images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="../images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="../images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<!--test2-->
+ 	<div>
+ 		<p>2.水平滚动模式</p>
+ 		<div  class="slider"  id="sliders2" style="">
+	 		<ul>
+		 		<li><a href=""><img src="../images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="../images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="../images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="../images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="../images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<!--test3-->
+ 	<div>
+ 		<p>3.一次展示多副图片(只在垂直和水平模式下有效果)</p>
+ 		<div  class="slider"  id="sliders3" style="">
+	 		<ul>
+		 		<li><a href=""><img src="../images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><div style='margin:50px;'>今天天气不错啊，挺风和日丽的，今天你吃了吗？还饿吗？<br>  <a href="">饿</a> <a href="">不饿</a>  </div></li>
+		 		<li><a href=""><img src="../images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="../images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="../images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	<div>
+ 		<p>4.垂直滚动，多行多列</p>
+ 		<div  class="slider"  id="sliders4" style="">
+	 		<ul>
+		 		<li><a href=""><img src="../images/1.jpg" alt="谁乱扔东西！！" /></a></li>
+		 		<li><a href=""><img src="../images/2.jpg" alt="你要干嘛！" /></a></li>
+		 		<li><a href=""><img src="../images/3.jpg" alt="爷给你笑个~" /></a></li>
+		 		<li><a href=""><img src="../images/4.jpg" alt="有没有搞错！" /></a></li>
+		 		<li><a href=""><img src="../images/5.jpg" alt="还是做牲口好啊！" /></a></li>
+		 	</ul>
+	 	</div>
+ 	</div>
+ 	 
+</body>
+</html>

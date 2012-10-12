@@ -31,12 +31,13 @@
 <script type="text/javascript" src="jquery.easing.1.3.js"></script> 
 <script type="text/javascript" src="zwslider.js"></script>
 <script type="text/javascript">
+ 
 jQuery(
 	function(){
 		$("#sliders1").zwslider();
-		$("#sliders2").zwslider({'switchStyle':'vertical','timeout':5000,'switchSpeed':500});
-		$("#sliders3").zwslider({'switchStyle':'horizontal','switchSpeed':100});
-		$("#sliders4").zwslider({'switchStyle':'horizontal','iWidth':250});
+		$("#sliders2").zwslider({'switchStyle':'v','timeout':5000,'switchSpeed':500});
+		$("#sliders3").zwslider({'switchStyle':'h','switchSpeed':100});
+		$("#sliders4").zwslider({'switchStyle':'h','iWidth':250});
 		$("#sliders5").zwslider({'prevBtn':'#outperbtn','nextBtn':'#outnextbtn'});
 		$("#sliders6").zwslider({'funcAfterChange':function(i,cnt){
 			$("#log6").html("after>"+i+">"+cnt);
@@ -44,9 +45,9 @@ jQuery(
 			$("#log6").html("before>"+i+">"+cnt);
 		},'PagesShowType':'num'});
 		$("#sliders7").zwslider({'pannelShowType':'slide','PagesShowType':'square'});
-		$("#sliders8").zwslider({'switchStyle':'vertical','perPage':2,'switchEase':'easeOutBounce'});
+		$("#sliders8").zwslider({'switchStyle':'v','iWidth':250,'iHeight':100,'switchEase':'easeOutBounce'});
 		$("#sliders9").zwslider({'prevClass':'pclass','nextClass':'pclass','pannelClass':'pannelc','PagesClass':'pagec'});
-		$("#sliders10").zwslider({'switchStyle':'horizontal','showPannel':false,'showPages':false,'showBtn':false});
+		$("#sliders10").zwslider({'switchStyle':'h','showPannel':false,'showPages':false,'showBtn':false});
 	}
 );
  
