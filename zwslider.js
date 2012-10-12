@@ -358,6 +358,9 @@
  			m_ul.bind(EV_MMOVE,function(event){
 				mmove(event);
 			});
+			m_ul.bind(EV_MOUT,function(event){
+				mend(event);
+			});
 			$(document.body).bind(EV_MEND,function(event){
 				mend(event);
 			});
